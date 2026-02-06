@@ -56,6 +56,9 @@
 
   --color-background-main: lab(2.42579% -0.165291 -0.470081);
   --color-background-invert: lab(100% 0 0);
+  --color-background-soft:lab(80.6% 0 -0.01 / 0.208);
+  --color-background-sub:#c8c8c835;
+  --color-background-hover:hwb(0 100% 0% / 0.055);
   --color-text-main: lab(100% 0 0);
   --color-text-invert: lab(2.42579% -0.165291 -0.470081);
   --color-text-soft: lab(100% 0 0 / 0.7);
@@ -130,9 +133,12 @@ body {
 /* ================= NAV ================= */
 .landing {
   background: url(resources/assets/bg-dark.svg);
+  background-repeat: no-repeat; 
+  background: var(--color-background-main);
   background-size: 120%;
   background-position: center;
   position: relative;
+  margin-bottom: calc(var(--spacing) * 10)
 }
 
 .landing::after {
@@ -360,7 +366,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: calc(var(--spacing) * 2);
-  background: #c8c8c835;
+  background: var(--color-background-sub);
   color: var(--color-text-main);
   border-radius: 999px;
   font-size: var(--font-sm);
@@ -402,12 +408,13 @@ body {
 .hero-input {
   display: inline-flex;
   align-items: center;
-  background: var(--color-background-soft);
+  background: var(--color-background-sub);
   border-radius: 999px;
   width: 25vw;
-  height: fit-content;
+  height: calc(var(--font-base)*2.5);
   padding: calc(var(--spacing) * 2);
   margin-bottom: calc(var(--spacing) * 10);
+  border: 1px solid var(--color-border-soft);
 }
 
 .hero-input input {
@@ -459,3 +466,4 @@ body {
   border-radius: var(--radius-3xl);
   border: 2px solid var(--color-border-sub);
 }
+
