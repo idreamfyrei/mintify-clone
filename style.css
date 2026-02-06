@@ -132,31 +132,37 @@ body {
 
 /* ================= NAV ================= */
 .landing {
-  background: url(resources/assets/bg-dark.svg);
-  background-repeat: no-repeat; 
-  background: var(--color-background-main);
+  background: 
+    linear-gradient(to bottom, transparent 70%, #08090a  100%),
+    url(resources/assets/bg-dark.svg);
   background-size: 120%;
   background-position: center;
   position: relative;
-  margin-bottom: calc(var(--spacing) * 10)
+  background-repeat: no-repeat;
+  background-color: var(--color-background-main);
 }
 
-.landing::after {
-  content: "";
+.landing::before {
+content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 300px;
+  background: black;
+  
+  
+ mask-image: 
+    linear-gradient(to top, var(--color-background-main) 100%, transparent 0%),
+    linear-gradient(to bottom, var(--color-background-main) 100%, transparent 0%);
+  mask-size: 100% 100%; /* Each mask covers half the height */
+  mask-position: bottom, top; /* Place first at bottom, second at top */
+  mask-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(to top, #08090a 0%, transparent 100%);
 
-  background: linear-gradient(
-    to top,
-    var(--background-color-primary) 0%,
-    transparent 100%
-  );
-
-  pointer-events: none; 
+  pointer-events: none;
 }
+
 
 /* ===== Nav ===== */
 .nav {
@@ -183,8 +189,8 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
-  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 100%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
 
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
@@ -465,5 +471,40 @@ body {
   height: auto;
   border-radius: var(--radius-3xl);
   border: 2px solid var(--color-border-sub);
+  margin-bottom: 0;
 }
+
+
+/* ================= BRANDS SECTION ================= */
+.brands {
+  margin-top: calc(var(--spacing)*30);
+  background-color: var(--color-background-main); 
+  margin-bottom: calc(var(--spacing)*60);
+}
+
+.brand-container {
+  max-width: var(--container-4xl); 
+  margin: 0 auto; 
+}
+
+.brand-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  column-gap: calc(var(--spacing)*20); 
+  row-gap: calc(var(--spacing)*15); 
+  justify-items: center; 
+  align-items: center;
+}
+
+.brand-logos img {
+  display: block; 
+  max-width: 100%; 
+  height: auto; 
+  max-height: 60px; 
+}
+
+
+
+
+
 
