@@ -20,7 +20,7 @@
     "wght" 400,
     "GRAD" 0,
     "opsz" 48;
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 :root {
@@ -132,6 +132,24 @@ body {
   background: url(resources/assets/bg-dark.svg);
   background-size: 120%;
   background-position: center;
+  position: relative;
+}
+
+.landing::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+
+  background: linear-gradient(
+    to top,
+    var(--background-color-primary) 0%,
+    transparent 100%
+  );
+
+  pointer-events: none; 
 }
 
 /* ===== Nav ===== */
@@ -150,18 +168,18 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   bottom: 0;
-  z-index: -1; 
-  
+  z-index: -1;
+
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
- 
+
   mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-  
+
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -277,7 +295,7 @@ body {
 .dropdown-menu-options span {
   font-size: var(--font-base);
   font-weight: 100;
-  margin-right: var(--spacing);
+  margin-left: var(--spacing);
   line-height: var(--text-base--line-height);
 }
 
@@ -335,12 +353,12 @@ body {
 }
 
 .hero-content {
-  padding-top: calc(var(--spacing)*10);
+  padding-top: calc(var(--spacing) * 10);
 }
 
 .badge {
   display: inline-flex;
-  align-items: center; 
+  align-items: center;
   gap: calc(var(--spacing) * 2);
   background: #c8c8c835;
   color: var(--color-text-main);
@@ -349,7 +367,6 @@ body {
   font-weight: var(--font-weight-normal);
   padding: var(--spacing) calc(var(--spacing) * 2);
 }
-
 
 .badge.pill {
   font-size: var(--font-xsm);
@@ -368,25 +385,29 @@ body {
   font-size: var(--font-xxxl);
   line-height: var(--line-height-xsm);
   font-weight: var(--font-weight-medium);
-  padding: calc(var(--spacing)*4);
-  margin-top: calc(var(--spacing)*6);
-  margin-bottom: calc(var(--spacing)*4);
+  padding: calc(var(--spacing) * 4);
+  margin-top: calc(var(--spacing) * 6);
+  margin-bottom: calc(var(--spacing) * 4);
 }
 
 .hero p {
   font-size: var(--font-base);
   line-height: var(--text-base--line-height);
   color: var(--color-text-main);
-  margin-bottom: 32px;
+  margin-bottom: calc(var(--spacing) * 8);
 }
 
 /* ===== Email Input ===== */
 
 .hero-input {
-  display: flex;
-  background: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-background-soft);
   border-radius: 999px;
-  padding: 6px;
+  width: 25vw;
+  height: fit-content;
+  padding: calc(var(--spacing) * 2);
+  margin-bottom: calc(var(--spacing) * 10);
 }
 
 .hero-input input {
@@ -394,16 +415,47 @@ body {
   background: transparent;
   border: none;
   outline: none;
-  color: #fff;
-  padding: 12px 16px;
+  font-size: var(--font-base);
+  line-height: var(--text-base--line-height);
+  color: var(--color-text-main);
+  font-weight: var(--font-weight-normal);
+  padding-left: calc(var(--spacing) * 3);
+}
+
+.hero-input input::placeholder {
+  color: var(--color-text-sub);
+  font-size: var(--font-sm);
+  line-height: var(--text-base);
+  font-weight: var(--font-weight-normal);
+  padding-left: calc(var(--spacing) * 1);
 }
 
 .hero-input button {
-  background: #fff;
-  color: #020617;
+  background: var(--color-background-invert);
+  color: var(--color-text-invert);
+  font-size: var(--font-base);
+  line-height: var(--text-base--line-height);
+  font-weight: 300;
   border: none;
   border-radius: 999px;
-  padding: 10px 20px;
-  font-weight: 600;
   cursor: pointer;
+  padding: var(--spacing) calc(var(--spacing) * 3);
+}
+
+/* ===== Hero Media ===== */
+
+.hero-media {
+  margin-top: calc(var(--spacing) * 10);
+  margin-bottom: calc(var(--spacing) * 10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing) * 5);
+}
+
+.hero-media img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-3xl);
+  border: 2px solid var(--color-border-sub);
 }
