@@ -231,6 +231,22 @@ The spacing system is based on a multiplier of `0.25rem`:
 Mintify Demo
 https://github.com/user-attachments/assets/239971a2-1846-4467-a400-7a2deb4d5981
 
+Screenshots-
+Nav and hero
+<img width="1470" height="956" alt="Screenshot 2026-02-07 at 11 00 14 AM" src="https://github.com/user-attachments/assets/56f49835-237e-42a5-805b-1c6f2cabbfc4" />
+Hero mask effect, glass effect of nav and brand logo grid
+<img width="1470" height="956" alt="Screenshot 2026-02-07 at 11 00 51 AM" src="https://github.com/user-attachments/assets/fba4f4e3-5d95-4b0b-91a7-5dfab2758050" />
+Features section
+<img width="1470" height="956" alt="Screenshot 2026-02-07 at 11 01 15 AM" src="https://github.com/user-attachments/assets/b215fe01-2388-454e-a356-43be2ecda538" />
+Bring Intelligence to knowledge
+<img width="1470" height="956" alt="Screenshot 2026-02-07 at 11 01 30 AM" src="https://github.com/user-attachments/assets/621e1845-e7c2-40af-9acd-a05ba607db44" />
+Customer Stories and Payment plans
+<img width="1470" height="956" alt="Screenshot 2026-02-07 at 11 02 04 AM" src="https://github.com/user-attachments/assets/ab1ee885-dcdf-4d13-a6af-c6e041c83895" />
+Footer
+<img width="1470" height="956" alt="Screenshot 2026-02-07 at 11 02 25 AM" src="https://github.com/user-attachments/assets/c6c28b8d-76fd-40e3-99f1-44d683ff1dd4" />
+
+
+
 ---
 
 **Created as a web development exercise to practice modern CSS techniques and semantic HTML structure.**
