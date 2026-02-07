@@ -10,6 +10,8 @@ A HTML and CSS powered recreation of the Mintlify documentation platform landing
 - [Features](#features)
 - [File Structure](#file-structure)
 - [Getting Started](#getting-started)
+- [Key Learnings](#key-learnings)
+- [Screenshots](#screenshots)
 
 ##  Overview
 
@@ -208,7 +210,7 @@ The spacing system is based on a multiplier of `0.25rem`:
 }
 ```
 
-##  Key Design Patterns
+###  Key Design Patterns
 
 1. **Glassmorphism Navigation**: Achieved using `backdrop-filter: blur()` with semi-transparent backgrounds
 2. **Mask Gradients**: Used for smooth fade effects on background transitions
@@ -225,6 +227,7 @@ The spacing system is based on a multiplier of `0.25rem`:
 - Few functionalities of webkit
 - Text superimposed on images
 - Grid and Flex applied together to get desired output
+- LAB color definations
 
 ##  Screenshots
 
