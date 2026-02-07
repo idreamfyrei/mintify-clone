@@ -370,14 +370,14 @@ body {
 /* ===== Badges ===== */
 .badge {
   display: inline-flex;
-  align-items: center;
+  justify-content: center;
   gap: calc(var(--spacing) * 2);
   background: var(--color-background-sub);
   color: var(--color-text-main);
   border-radius: 999px;
   font-size: var(--font-sm);
   font-weight: var(--font-weight-normal);
-  padding: var(--spacing) calc(var(--spacing) * 2);
+  padding: var(--spacing) calc(var(--spacing) *2);
 }
 
 .badge.pill {
@@ -387,10 +387,9 @@ body {
   line-height: var(--line-height-xsm);
 }
 
-.badge.icon {
-  font-size: var(--font-xsm);
-  margin: 0;
-  line-height: 1;
+.badge img {
+width: 16px;
+
 }
 
 /* ===== Hero Text ===== */

@@ -228,6 +228,7 @@ The spacing system is based on a multiplier of `0.25rem`:
 
 ##  Screenshots
 
+Mintify Demo
 https://github.com/user-attachments/assets/239971a2-1846-4467-a400-7a2deb4d5981
 
 ---
